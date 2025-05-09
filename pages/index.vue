@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-red-500">
-    <h1>DEADGEESE</h1>
+  <div>
+    <h1 class="text-dg-primary">DEADGEESE</h1>
   </div>
 </template>
 
