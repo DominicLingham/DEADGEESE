@@ -5,6 +5,12 @@ export default {
     extend: {
       colors: {
         'dg-primary': '#ec5683'
+      },
+      fontFamily: {
+        'pixel': ['VT323', 'monospace']
+      },
+      fontSize: {
+        '10xl': '10rem'
       }
     },
   },

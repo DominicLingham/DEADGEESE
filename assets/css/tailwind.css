@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply h-screen;
+        @apply font-pixel;
+        @apply bg-black;
+    }
+
+    div#__nuxt {
+        @apply h-full;
+    }
+
+    h1 {
+        @apply text-dg-primary;
+    }
+}
