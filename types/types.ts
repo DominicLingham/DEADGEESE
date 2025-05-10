@@ -11,3 +11,9 @@ export type SocialLink = {
     url: string;
     imgMeta: imgMeta;
 }
+
+export type NavLink = {
+    id: number;
+    text: string;
+    path: string;
+}
