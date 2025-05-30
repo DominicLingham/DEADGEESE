@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-4 flex flex-col md:flex-row justify-center items-center gap-8">
+  <div class="w-full p-4 flex md:flex-row justify-center items-center gap-8">
     <a v-for="link in socialLinks"
        :key="link.id"
        :href="link.url"

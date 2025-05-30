@@ -16,4 +16,5 @@ export type NavLink = {
     id: number;
     text: string;
     path: string;
+    comingSoon?: boolean;
 }
