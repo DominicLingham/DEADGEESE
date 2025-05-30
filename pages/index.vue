@@ -1,6 +1,6 @@
 <template>
   <div class="h-full container mx-auto">
-    <div class="w-full h-full flex flex-col justify-center items-center gap-4">
+    <div class="w-full h-full flex flex-col justify-evenly md:justify-center items-center sm:gap-3 md:gap-4">
 <!--       <h1 class="text-dg-primary p-2 text-7xl md:text-9xl"
           v-gsap.infinitely.to="
           {
@@ -9,8 +9,9 @@
             repeat: -1,
             yoyo: true
           }">DEADGEESE</h1> -->
-      <div class="logo">
-        <NuxtImg src="/DEADGEESE_LOGO.png" sizes="sm:250px md:350px"/>
+      <div class="logo flex flex-col items-center gap-2">
+        <NuxtImg src="/DEADGEESE_LOGO.png" sizes="250px md:350px"/>
+        <p class="text-white text-center">What's good for the goose, is good for the gander</p>
       </div>
       <Links />
       <Socials />
@@ -24,6 +25,7 @@
                 loading="lazy">
         </iframe>
       </div>
+      <WalkingGoose />
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@
 <script lang="ts" setup>
 import Links from "@/components/navigation/Links"
 import Socials from "@/components/Socials"
+import WalkingGoose from "@/components/WalkingGoose"
 
 </script>
 

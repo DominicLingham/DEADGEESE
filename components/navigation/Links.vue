@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-2">
-    <WalkingGoose />
+    <!-- <WalkingGoose /> -->
         <div class="w-full p-4 flex flex-col md:flex-row justify-center items-center gap-6">
         <NuxtLink v-for="link in links"
                   :key="link.id"

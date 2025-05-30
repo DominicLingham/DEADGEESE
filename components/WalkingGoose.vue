@@ -43,7 +43,7 @@ async function animateGooseLoop() {
 
     await gsap.to(goose.value, {
       x: distance,
-      duration: 5,
+      duration: 10,
       ease: 'linear',
     })
 
