@@ -15,7 +15,7 @@
       <Links />
       <Socials />
       <div class="p-2 flex justify-center items-center md:w-full">
-        <iframe style="border-radius:12px; max-width: 550px;"
+        <iframe style="border-radius:12px; max-width: 600px;"
                 src="https://open.spotify.com/embed/artist/4WJcicbxWJZxYGXKNc3GEW?utm_source=generator&theme=0"
                 width="100%"
                 height="152"
