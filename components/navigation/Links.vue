@@ -1,21 +1,27 @@
 <template>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col">
     <!-- <WalkingGoose /> -->
-        <div class="w-full p-4 flex flex-col md:flex-row justify-center items-center gap-6">
+        <div class="w-full p-4 flex flex-col justify-center items-center gap-6 md:flex-row lg:flex-row md:gap-8">
         <NuxtLink v-for="link in links"
                   :key="link.id"
-                  class="text-5xl text-dg-primary cursor-pointer"
+                  class="text-3xl md:text-5xl whitespace-nowrap text-dg-primary cursor-pointer text-center"
                   :class="{ 
                   disabled: link.comingSoon,
                   'hover:text-white': !link.comingSoon,
                   'cursor-not-allowed': link.comingSoon
                   }"
-                  :to="link.path">
-          <NuxtImg v-if="link.comingSoon"
+                  :to="link.path"
+                  v-gsap.whileHover.to="{duration: 0.5, scale: '1.10'}">
+<!--           <NuxtImg v-if="link.comingSoon"
           width="80px"
           src="/COMINGSOON2.png"
-          class="absolute translate-x-[10%] translate-y-[90%] z-10"/>
+          class="absolute translate-y-[0.5rem] z-10"/> -->
           {{ link.text }}
+          <span 
+          v-if="link.comingSoon"
+          class="block md:inline text-sm">
+          (coming soon)
+        </span>
         </NuxtLink>
     </div>
   </div>
@@ -40,6 +46,11 @@ const links: NavLink[] = [
     id: 'gallery',
     text: "Gallery",
     path: "/gallery",
+  },
+  {
+    id: 'contact',
+    text: "Contact",
+    path: "/contact",
   },
   {
     id: 'merch',

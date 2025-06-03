@@ -13,7 +13,7 @@ export type SocialLink = {
 }
 
 export type NavLink = {
-    id: number;
+    id: string | number;
     text: string;
     path: string;
     comingSoon?: boolean;

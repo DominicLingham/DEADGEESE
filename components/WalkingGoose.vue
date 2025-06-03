@@ -2,8 +2,7 @@
     <div class="goose-container w-full items-center" ref="gooseContainer">
           <img 
           :src="gooseSrc"
-          width="50px"
-          class="goose"
+          class="goose w-12"
           ref="goose"/>
     </div>
 </template>
@@ -54,7 +53,7 @@ async function animateGooseLoop() {
 
     await gsap.to(goose.value, {
       x: 0,
-      duration: 5,
+      duration: 10,
       ease: 'linear',
     })
   }
@@ -79,6 +78,7 @@ useResizeObserver(gooseContainer, () => {
 
 <style scoped>
 .goose-container {
+  max-width: calc( 100vw );
   width: 100%;
 }
 

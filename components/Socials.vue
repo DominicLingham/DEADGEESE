@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full p-4 flex md:flex-row justify-center items-center gap-8">
+  <div class="p-4 flex md:flex-row justify-center items-center gap-8">
     <a v-for="link in socialLinks"
        :key="link.id"
        :href="link.url"
        target="_blank">
         <NuxtImg :src="link.imgMeta.src"
                  :alt="link.imgMeta.alt"
-                 :width="link.imgMeta.width"
+                 sizes="sm:30 md:50"
                  v-gsap.whileHover.to="{scale: '1.25'}"/>
     </a>
   </div>
