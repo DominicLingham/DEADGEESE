@@ -37,7 +37,7 @@ const images = [
     id: 2,
     src: "/gallery/DSCF5486.jpeg",
     meta: {
-      caption: "DEADGEESE 2024",
+      caption: "THE SHIP INN - 2025",
       credit: "@naomigoesdigital"
     }
   },
@@ -45,7 +45,7 @@ const images = [
     id: 3,
     src: "/gallery/DSCF5271.jpeg",
     meta: {
-      caption: "DEADGEESE 2024",
+      caption: "THE SHIP INN - 2025",
       credit: "@naomigoesdigital"
     }
   },

@@ -8,7 +8,7 @@
             <NuxtImg :src="image.src" loading="lazy" placeholder />
             <div v-if="image.meta?.caption || image.meta?.credit" class="image-info">
               <p v-if="image.meta?.caption" class="caption">{{ image.meta?.caption }}</p>
-              <p v-if="image.meta?.credit" class="credit">{{ image.meta?.credit }}</p>
+              <p v-if="image.meta?.credit" class="credit">Photo credit - {{ image.meta?.credit }}</p>
             </div>
           </div>
         </SplideSlide>
