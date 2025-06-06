@@ -4,8 +4,8 @@
        :key="link.id"
        :href="link.url"
        target="_blank">
-        <NuxtImg :src="link.imgMeta.src"
-                 :alt="link.imgMeta.alt"
+        <NuxtImg :src="link.image.src"
+                 :alt="link.image.meta?.alt"
                  sizes="sm:30 md:50"
                  v-gsap.whileHover.to="{scale: '1.25'}"/>
     </a>
@@ -20,20 +20,26 @@ const socialLinks: SocialLink[] = [
     id: 2,
     name: "YouTube",
     url: "https://www.youtube.com/@DEADGEESE",
-    imgMeta: {
+    image: {
+      id: 1,
       src: "/youtube_social_icon_red.png",
-      width: "50px",
-      alt: "YouTube Logo"
+      meta: {
+        width: "50px",
+        alt: "YouTube Logo"
+      }
     }
   },
   {
     id: 3,
     name: "Instagram",
     url: "https://www.instagram.com/deadgeeseband?igsh=OG93a25xNXhzbzBl",
-    imgMeta: {
+    image: {
+      id: 2,
       src: "/instagram_Glyph_Gradient.png",
-      width: "50px",
-      alt: "Instagram Logo"
+      meta: {
+        width: "50px",
+        alt: "Instagram Logo"
+      }
     }
   }
 ]

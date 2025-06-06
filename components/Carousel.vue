@@ -5,10 +5,10 @@
       <Splide :options="options" aria-labelledby="My Favorite Images" @splide:moved="handleSlideChange" ref="splideRef">
         <SplideSlide v-for="(image, index) in images" :key="image.id">
           <div class="slide-content">
-            <NuxtImg :src="image.src" />
-            <div v-if="image.caption || image.credit" class="image-info">
-              <p v-if="image.caption" class="caption">{{ image.caption }}</p>
-              <p v-if="image.credit" class="credit">{{ image.credit }}</p>
+            <NuxtImg :src="image.src" loading="lazy" placeholder/>
+            <div v-if="image.meta?.caption || image.meta?.credit" class="image-info">
+              <p v-if="image.meta?.caption" class="caption">{{ image.meta?.caption }}</p>
+              <p v-if="image.meta?.credit" class="credit">{{ image.meta?.credit }}</p>
             </div>
           </div>
         </SplideSlide>
@@ -20,20 +20,11 @@
 <script setup lang="ts">
 import Polaroid from "../components/gallery/Polaroid.vue";
 import type { PropType } from 'vue';
+import type { Image } from "../types/types";
 
-interface Image {
-  id: string | number;
-  src: string;
-  caption?: string;
-  credit?: string;
-}
-
-const props = defineProps({
-  images: {
-    type: Array as PropType<Image[]>,
-    required: true
-  }
-});
+const props = defineProps<{
+  images: Image[];
+}>();
 
 const visible = defineModel('visible', { default: false });
 const currentImageIndex = defineModel('currentImage', { default: 0 });

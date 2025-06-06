@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center justify-center">
       <div class="gallery-images mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
         <div v-for="(image, index) in images" :key="image.id" class="gallery-item p-4">
-          <Polaroid :img-src="image.src" :caption="image.caption" :credit="image.credit"
+          <Polaroid :img-src="image.src" :caption="image.meta?.caption" :credit="image.meta?.credit"
             @click="handleImageClick(index)" class="cursor-pointer transition-transform hover:scale-105" />
         </div>
       </div>
@@ -16,40 +16,62 @@
 
 <script lang="ts" setup>
 import Polaroid from "../components/gallery/Polaroid.vue";
-import type { Image } from "../components/Carousel.vue";
+import type { Image } from "../types/types";
 
-const showCarousel = ref(false);
+const showCarousel = ref<boolean>(false);
 const currentImageIndex = ref<number>(0);
 
 const images = [
   {
     id: 1,
     src: "/gallery/DEADGEESEPROMO.jpeg",
-    caption: "DEADGEESE 2024",
+    meta: {
+      caption: "DEADGEESE 2024",
+    }
   },
   {
     id: 2,
     src: "/gallery/DSCF5486.jpeg",
-    caption: "DEADGEESE 2024",
-    credit: "@naomigoesdigital"
+    meta: {
+      caption: "DEADGEESE 2024",
+      credit: "@naomigoesdigital"
+    }
   },
   {
     id: 3,
-    src: "/gallery/DSCF5486.jpeg",
-    caption: "DEADGEESE 2024",
-    credit: "@naomigoesdigital"
+    src: "/gallery/DSCF5271.jpeg",
+    meta: {
+      caption: "DEADGEESE 2024",
+      credit: "@naomigoesdigital"
+    }
   },
   {
     id: 4,
-    src: "/gallery/DSCF5486.jpeg",
-    caption: "DEADGEESE 2024",
-    credit: "@naomigoesdigital"
+    src: "/gallery/DSCF5270.jpeg",
+    meta: {
+      caption: "THE SHIP INN - 2025",
+      credit: "@naomigoesdigital"
+    }
   },
-
-
+  {
+    id: 5, 
+    src: "/gallery/DSCF9479.jpeg",
+    meta: {
+      caption: "LADY LUCK - April 2025",
+      credit: "@naomigoesdigital"
+    }
+  },
+  {
+    id: 6,
+    src: "/gallery/DSCF9521.jpeg",
+    meta: {
+      caption: "LADY LUCK - April 2025",
+      credit: "@naomigoesdigital"
+    }
+  }
 ]
 
-function handleImageClick(index): void {
+function handleImageClick(index: number): void {
   currentImageIndex.value = index;
   showCarousel.value = true;
 }

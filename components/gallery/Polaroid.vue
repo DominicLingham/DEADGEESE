@@ -8,8 +8,8 @@
     '--left-offset': `${leftOffset}px`,
     '--right-offset': `${rightOffset}px`
   }">
-    <div class="polaroid__image">
-      <NuxtImg :src="imgSrc" sizes="300px" />
+    <div class="polaroid__image-wrapper">
+      <NuxtImg :src="imgSrc" sizes="300px" class="polaroid__image"/>
     </div>
     <div class="polaroid__caption text-center p-3 min-h-16">
       <p v-if="caption" class="font-handwritten text-3xl">{{ caption }}</p>
@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<{
   caption?: string;
   credit?: string;
   hideTape?: boolean;
-  disableAnimation: boolean;
+  disableAnimation?: boolean;
 }>(), {
   hideTape: false,
   disableAnimation: false,
@@ -46,6 +46,11 @@ const rightOffset = -20 - Math.random() * 20
   border-radius: 8px;
   min-height: 100%;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &__image-wrapper {
+    max-height: 200px;
+    overflow: hidden;
+  }
 
   &:hover {
     transform: scale(1.05) rotate(2deg);
