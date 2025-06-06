@@ -11,7 +11,7 @@
     <div class="polaroid__image">
       <NuxtImg :src="imgSrc" sizes="300px" />
     </div>
-    <div class="polaroid__caption text-center p-3">
+    <div class="polaroid__caption text-center p-3 min-h-16">
       <p v-if="caption" class="font-handwritten text-3xl">{{ caption }}</p>
       <p v-if="credit" class="font-handwritten text-xl">Photo credit - {{ credit }}</p>
     </div>
@@ -39,9 +39,11 @@ const rightOffset = -20 - Math.random() * 20
   background: #fff;
   border-radius: 8px;
   min-height: 100%;
-  
-  &__caption {
-    min-height: 4rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   }
 
   &::before,
