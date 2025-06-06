@@ -186,11 +186,11 @@ const options = computed(() => ({
 }
 
 :deep(.splide__arrow--prev) {
-  left: 1rem;
+  left: -4rem;
 }
 
 :deep(.splide__arrow--next) {
-  right: 1rem;
+  right: -4rem;
 }
 
 :deep(.splide__arrow:disabled) {

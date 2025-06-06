@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col">
-    <!-- <WalkingGoose /> -->
         <div class="w-full p-4 flex flex-col justify-center items-center gap-6 md:flex-row lg:flex-row md:gap-8">
         <NuxtLink v-for="link in links"
                   :key="link.id"
@@ -24,7 +23,6 @@
 
 <script lang="ts" setup>
 import { NavLink } from "../../types/types"
-import WalkingGoose from "@/components/WalkingGoose"
 
 const links: NavLink[] = [
   {

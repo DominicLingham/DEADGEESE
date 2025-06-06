@@ -23,7 +23,6 @@
 <script lang="ts" setup>
 import Links from "@/components/navigation/Links"
 import Socials from "@/components/Socials"
-import WalkingGoose from "@/components/WalkingGoose"
 
 </script>
 

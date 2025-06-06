@@ -1,10 +1,11 @@
 <template>
   <NuxtLayout name="default">
     <div :id="`${pageName}-page`" class="flex min-h-full w-full flex-col p-4">
-      <nav class="sticky top-0 z-10 flex justify-center py-4 bg-black bg-opacity-80">
+      <nav class="sticky top-0 z-10 flex flex-col items-center justify-center py-4 bg-black bg-opacity-80">
         <NuxtLink class="logo" to="/">
           <NuxtImg src="/DEADGEESE_LOGO.png" sizes="sm:200px" class="max-h-24 w-auto" />
         </NuxtLink>
+        <div id="site-heading" class="text-2xl text-dg-primary">{{ pageName }}</div>
       </nav>
       <main class="flex flex-1 flex-col">
         <slot />
@@ -15,7 +16,10 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-const pageName = computed<string>(() => route?.name ?? "site");
+const pageName = computed<string>(() => {
+  const name = route?.name?.toString() ?? "site";
+  return name.charAt(0).toUpperCase() + name.slice(1);
+});
 </script>
 
 <style>
