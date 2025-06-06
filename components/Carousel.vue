@@ -5,7 +5,7 @@
       <Splide :options="options" aria-labelledby="My Favorite Images" @splide:moved="handleSlideChange" ref="splideRef">
         <SplideSlide v-for="(image, index) in images" :key="image.id">
           <div class="slide-content">
-            <NuxtImg :src="image.src" loading="lazy" placeholder/>
+            <NuxtImg :src="image.src" loading="lazy" placeholder />
             <div v-if="image.meta?.caption || image.meta?.credit" class="image-info">
               <p v-if="image.meta?.caption" class="caption">{{ image.meta?.caption }}</p>
               <p v-if="image.meta?.credit" class="credit">{{ image.meta?.credit }}</p>

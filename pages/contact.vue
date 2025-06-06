@@ -6,6 +6,10 @@
 definePageMeta({
   layout: 'page',
 })
+
+useHead({
+  title: 'CONTACT'
+})
 </script>
 
 <style scoped>

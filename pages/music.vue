@@ -8,6 +8,10 @@
 definePageMeta({
   layout: 'page'
 })
+
+useHead({
+  title: 'MUSIC'
+})
 </script>
 
 <style>

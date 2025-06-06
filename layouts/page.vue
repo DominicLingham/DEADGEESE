@@ -15,11 +15,14 @@
 </template>
 
 <script lang="ts" setup>
+
 const route = useRoute();
+
 const pageName = computed<string>(() => {
   const name = route?.name?.toString() ?? "site";
-  return name.charAt(0).toUpperCase() + name.slice(1);
+  return name.toUpperCase();
 });
+
 </script>
 
 <style>

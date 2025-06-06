@@ -18,6 +18,10 @@
 import Polaroid from "../components/gallery/Polaroid.vue";
 import type { Image } from "../types/types";
 
+useHead({
+  title: 'GALLERY'
+})
+
 const showCarousel = ref<boolean>(false);
 const currentImageIndex = ref<number>(0);
 
@@ -66,6 +70,14 @@ const images = [
     src: "/gallery/DSCF9521.jpeg",
     meta: {
       caption: "LADY LUCK - April 2025",
+      credit: "@naomigoesdigital"
+    }
+  },
+  {
+    id: 7,
+    src: "/gallery/DSCF9053.jpeg",
+    meta: {
+      caption: "THE SHIP INN - 2025",
       credit: "@naomigoesdigital"
     }
   }

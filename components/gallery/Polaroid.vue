@@ -9,7 +9,7 @@
     '--right-offset': `${rightOffset}px`
   }">
     <div class="polaroid__image-wrapper">
-      <NuxtImg :src="imgSrc" sizes="300px" class="polaroid__image"/>
+      <NuxtImg :src="imgSrc" sizes="300px" class="polaroid__image" :placeholder="[300, 200]"/>
     </div>
     <div class="polaroid__caption text-center p-3 min-h-16">
       <p v-if="caption" class="font-handwritten text-3xl">{{ caption }}</p>

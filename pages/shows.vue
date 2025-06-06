@@ -6,7 +6,11 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'page'
+  layout: 'page',
+})
+
+useHead({
+  title: 'SHOWS'
 })
 </script>
 
