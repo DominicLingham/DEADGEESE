@@ -1,6 +1,6 @@
 <template>
   <div class="h-full container mx-auto">
-    <div class="w-full h-full flex flex-col items-center md:justify-center md:gap-6">
+    <div class="w-full h-full flex flex-col gap-2 mt-4 items-center md:justify-center md:gap-6">
       <div class="logo flex flex-col items-center gap-2 mt-4">
         <NuxtImg src="/DEADGEESE_LOGO.png" class="logo" />
         <p class="text-white text-center md:text-xl">
@@ -10,15 +10,11 @@
       <Links />
       <Socials />
       <div class="p-2 flex justify-center items-center">
-        <iframe
-        class="spotify-embed"
-        src="https://open.spotify.com/embed/artist/4WJcicbxWJZxYGXKNc3GEW?utm_source=generator&theme=0"
-        height="152"
-        frameBorder="0"
-        :allowfullscreen=true
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
+        <iframe class="spotify-embed"
+          src="https://open.spotify.com/embed/artist/4WJcicbxWJZxYGXKNc3GEW?utm_source=generator&theme=0" height="152"
+          frameBorder="0" :allowfullscreen=true
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
       </div>
     </div>
   </div>
@@ -32,12 +28,8 @@ import WalkingGoose from "@/components/WalkingGoose"
 </script>
 
 <style scoped lang="scss">
-:deep(.goose-container) {
-  position: relative;
-}
-
 .spotify-embed {
-  border-radius:12px;
+  border-radius: 12px;
   width: 100%;
   max-width: 600px;
 
@@ -54,7 +46,7 @@ import WalkingGoose from "@/components/WalkingGoose"
   }
 
   @media(min-width: 1024px) {
-    width: 550px;
+    width: 400px;
   }
 }
 </style>

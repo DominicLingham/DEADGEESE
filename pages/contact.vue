@@ -1,5 +1,5 @@
 ﻿<template>
-  <h1>Contact</h1>
+  <Carousel />
 </template>
 
 <script setup lang="ts">
