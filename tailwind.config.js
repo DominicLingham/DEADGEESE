@@ -7,7 +7,8 @@ export default {
         'dg-primary': '#ec5683'
       },
       fontFamily: {
-        'pixel': ['VT323', 'monospace']
+        'pixel': ['VT323', 'monospace'],
+        'handwritten': ['Just Another Hand', 'VT323', 'monospace']
       },
       fontSize: {
         '10xl': '10rem'

@@ -12,7 +12,8 @@
       <NuxtImg :src="imgSrc" sizes="300px" />
     </div>
     <div class="polaroid__caption text-center p-3">
-      <p v-if="caption">{{ caption }}</p>
+      <p v-if="caption" class="font-handwritten text-3xl">{{ caption }}</p>
+      <p v-if="credit" class="font-handwritten text-xl">Photo credit - {{ credit }}</p>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@
 const props = defineProps<{
   imgSrc: string;
   caption?: string;
+  credit?: string;
 }>();
 
 const leftRotation = `${-30 - Math.random() * 30}deg`
