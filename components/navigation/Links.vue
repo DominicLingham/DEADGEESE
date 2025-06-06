@@ -7,15 +7,10 @@
                   class="text-3xl md:text-5xl whitespace-nowrap text-dg-primary cursor-pointer text-center"
                   :class="{ 
                   disabled: link.comingSoon,
-                  'hover:text-white': !link.comingSoon,
-                  'cursor-not-allowed': link.comingSoon
+                  'hover:text-white hover:underline': !link.comingSoon
                   }"
                   :to="link.path"
-                  v-gsap.whileHover.to="{duration: 0.5, scale: '1.10'}">
-<!--           <NuxtImg v-if="link.comingSoon"
-          width="80px"
-          src="/COMINGSOON2.png"
-          class="absolute translate-y-[0.5rem] z-10"/> -->
+                  v-gsap.whileHover.to="{duration: 0.25, scale: '1.05'}">
           {{ link.text }}
           <span 
           v-if="link.comingSoon"
@@ -65,6 +60,6 @@ const links: NavLink[] = [
 <style>
 .disabled {
   color: lightslategray;
-  pointer-events: none;
+  cursor: not-allowed;
 }
 </style>
